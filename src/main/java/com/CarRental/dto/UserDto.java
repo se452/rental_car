@@ -1,6 +1,7 @@
-package dto;
+package com.CarRental.dto;
 
-import enums.UserRole;
+import com.CarRental.enums.UserRole;
+
 import lombok.Data;
 
 @Data

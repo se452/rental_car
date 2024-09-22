@@ -1,4 +1,4 @@
-package enums;
+package com.CarRental.enums;
 
 
 

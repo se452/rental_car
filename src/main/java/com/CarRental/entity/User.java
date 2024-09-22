@@ -1,7 +1,8 @@
-package entity;
+package com.CarRental.entity;
 
 
-import enums.UserRole;
+import com.CarRental.enums.UserRole;
+
 import jakarta.persistence.*;
 import lombok.Data;
 
