@@ -23,6 +23,4 @@ public class BookCarDto {
 
   private int car_id;
 
-  private String user_name;
-
 }

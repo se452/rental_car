@@ -1,6 +1,10 @@
 <h1>Purpose</h1>
 <ul>
+<<<<<<< HEAD
    <li>Milestone 1:</li>
+=======
+   <li>Milestone 1: Identify the roles and resposibilities for each of the project members as well as setting up the project structure accordigly.</li>
+>>>>>>> e89ffa8fd3971bdb62a8e47d661fb37a66e0616e
 </ul>
 
 
@@ -35,7 +39,11 @@
 
 
 <h1>Conflict Resolution</h1>
+<<<<<<< HEAD
 <p>Conflicts need to be resolved during a meeting if possible. Otherwise conflicts may be resolved using merging software and majority vote on important decision making. If no majority is met then a coinflip will be conducted.</p>
+=======
+<p>Conflicts need to be resolved during a meeting as well using the discord channel for communication</p>
+>>>>>>> e89ffa8fd3971bdb62a8e47d661fb37a66e0616e
 
 <h1>Communication Mechanism</h1>
 <p>We will use Discord to conduct meetings and we shall hold meetings every saturday at 2:00PM</p>
