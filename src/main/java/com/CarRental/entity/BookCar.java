@@ -5,6 +5,7 @@ import org.hibernate.annotations.OnDeleteAction;
 import org.hibernate.grammars.hql.HqlParser.DateContext;
 
 import com.CarRental.enums.BookCarStatus;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.annotation.Generated;
 import jakarta.persistence.Entity;
@@ -36,10 +37,15 @@ public class BookCar {
   private BookCarStatus status;
 
   @ManyToOne(fetch = FetchType.LAZY, optional = false)
-  @JoinColumn(name = "car_id", nullable = false)
+  @JoinColumn(name = "user_id", nullable = false)
   @OnDelete(action = OnDeleteAction.CASCADE)
+  @JsonIgnore
   private User user;
 
+  @ManyToOne(fetch = FetchType.LAZY, optional = false)
+  @JoinColumn(name = "car_id", nullable = false)
+  @OnDelete(action = OnDeleteAction.CASCADE)
+  @JsonIgnore
   private Car car;
 
 }
