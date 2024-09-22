@@ -1,6 +1,5 @@
 <h1>Purpose</h1>
 <ul>
-   <li>Milestone 1:</li>
    <li>Milestone 1: Identify the roles and resposibilities for each of the project members as well as setting up the project structure accordigly.</li>
 </ul>
 
