@@ -28,7 +28,7 @@ Milestone
         </tr>
         <tr>
             <td>Harish</td>
-            <td>#</td>
+            <td>Dashboard and Search Functionality</td>
         </tr>
     </tbody>
 </table>
