@@ -2,6 +2,7 @@ package com.CarRental.enums;
 
 public enum BookingCarStatus {
 
-  PENDING, APPROVED, REJECTED, CANCELLED, RETURNED;
+    //Check the status of the booking by Manthan
+    //PENDING, APPROVED, RETURNED;
 
 }

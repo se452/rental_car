@@ -1,26 +1,24 @@
 package com.CarRental.dto;
 
-import com.CarRental.enums.BookCarStatus;
+
 
 import lombok.Data;
-import java.util.Date;
+import java.time.LocalDate;
 
 @Data
 public class BookCarDto {
 
   private int id;
 
-  private Date FromDate;
-  private Date ToDate;
+  private LocalDate fromDate;
+  private LocalDate toDate;
 
   private long days;
 
   private long price;
 
-  private BookCarStatus status;
+  private int userId;
 
-  private int user_id;
-
-  private int car_id;
-
+  private int carId;
+ 
 }
