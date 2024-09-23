@@ -1,12 +1,11 @@
 <h1>Purpose</h1>
 <ul>
-<<<<<<< HEAD
-   <li>Milestone 1:</li>
+<<<<<<< 
+   <li>MilestoneHEAD 1:</li>
 =======
    <li>Milestone 1: Identify the roles and resposibilities for each of the project members as well as setting up the project structure accordigly.</li>
 >>>>>>> e89ffa8fd3971bdb62a8e47d661fb37a66e0616e
 </ul>
-
 
    <h1>Project Members</h1>
 
@@ -36,7 +35,6 @@
         </tr>
     </tbody>
 </table>
-
 
 <h1>Conflict Resolution</h1>
 <<<<<<< HEAD
@@ -90,5 +88,3 @@
     </tr>
   </tbody>
 </table>
-
-
