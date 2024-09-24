@@ -3,7 +3,6 @@ import java.util.Date;
 
 import org.springframework.web.multipart.MultipartFile;
 
-import jakarta.persistence.Column;
 
 import lombok.Data;
 
@@ -30,7 +29,6 @@ public class CarDto {
     private byte[] image;
 
 
-    @Column(columnDefinition = "longblob")
     private MultipartFile returnedImage;
     
 }
