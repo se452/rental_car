@@ -1,4 +1,4 @@
-package com.CarRental.dto;
+package com.CarRental.Booking_Car;
 
 
 

@@ -1,4 +1,4 @@
-package com.CarRental.entity;
+package com.CarRental.Booking_Car;
 
 import jakarta.persistence.*;
 import lombok.Data;
