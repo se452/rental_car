@@ -3,6 +3,7 @@
 Milestone
    <li>Milestone 1: Identify the roles and resposibilities for each of the project members as well as setting up the project structure accordigly.</li>
 </ul>
+  <a href="https://drive.google.com/file/d/1Y_JMWRthXNXGP7GGjJre9CIux7mjER56/view" alt=" Prototype">Prototype</a>
 
    <h1>Project Members</h1>
 
@@ -79,6 +80,8 @@ Milestone
       <td>Yaml</td>
       <td>Properties</td>
       <td>We are familiar with it as we learnt it in the DevOps class</td>
+
     </tr>
+
   </tbody>
 </table>
