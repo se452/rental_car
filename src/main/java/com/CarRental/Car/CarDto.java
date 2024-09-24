@@ -1,4 +1,4 @@
-package com.CarRental.dto;
+package com.CarRental.Car;
 import java.util.Date;
 
 import org.springframework.web.multipart.MultipartFile;
