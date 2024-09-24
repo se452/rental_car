@@ -80,7 +80,6 @@ Milestone
       <td>Yaml</td>
       <td>Properties</td>
       <td>We are familiar with it as we learnt it in the DevOps class</td>
-
     </tr>
 
   </tbody>
