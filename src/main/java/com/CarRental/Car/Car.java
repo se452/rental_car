@@ -1,4 +1,4 @@
-package com.CarRental.entity;
+package com.CarRental.Car;
 import java.util.Date;
 
 import jakarta.persistence.Entity;
