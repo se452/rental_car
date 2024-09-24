@@ -31,7 +31,7 @@ Milestone
         </tr>
         <tr>
             <td>Harish</td>
-            <td>Dashboard and Search Functionality</td>
+            <td>Payment Functionality</td>
         </tr>
     </tbody>
 </table>
