@@ -1,6 +1,6 @@
 package com.CarRental.Car;
-import java.util.Date;
 
+import java.util.Date;
 
 import lombok.Data;
 
@@ -28,6 +28,9 @@ public class Car {
 
     private byte[] image;
 
+    public CarDto getCarDto() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getCarDto'");
+    }
 
-    
 }

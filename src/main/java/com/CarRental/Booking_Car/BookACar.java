@@ -20,7 +20,7 @@ import lombok.Data;
 
 @Entity
 @Data
-public class BookCar {
+public class BookACar {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -33,10 +33,9 @@ public class BookCar {
 
     private long price;
 
-    private BookingCarStatus status;
+    private BookCarStatus bookCarStatus;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-
     @JoinColumn(name = "user_id", nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JsonIgnore
