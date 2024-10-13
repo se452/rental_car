@@ -1,24 +1,25 @@
 package com.CarRental.Booking_Car;
 
-
+import java.time.LocalDate;
 
 import lombok.Data;
-import java.time.LocalDate;
 
 @Data
 public class BookCarDto {
 
-  private int id;
+    private int id;
 
-  private LocalDate fromDate;
-  private LocalDate toDate;
+    private LocalDate fromDate;
+    private LocalDate toDate;
 
-  private long days;
+    private long days;
 
-  private long price;
+    private long price;
 
-  private int userId;
+    private BookingCarStatus status;
 
-  private int carId;
- 
+    private long userId;
+
+    private long carId;
+
 }
