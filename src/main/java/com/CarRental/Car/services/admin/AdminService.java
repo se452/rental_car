@@ -1,4 +1,4 @@
-package com.CarRental.services.admin;
+package com.CarRental.Car.services.admin;
 
 import java.io.IOException;
 import java.util.List;
