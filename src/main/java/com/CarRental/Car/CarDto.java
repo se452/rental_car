@@ -6,6 +6,8 @@ import org.springframework.web.multipart.MultipartFile;
 
 import lombok.Data;
 
+@Data
+
 public class CarDto {
 
     private Long id;
@@ -26,9 +28,9 @@ public class CarDto {
 
     private Long price;
 
-    private byte[] image;
+    private MultipartFile image;
 
 
-    private MultipartFile returnedImage;
+    private byte[] MultipartFile ;
     
 }
