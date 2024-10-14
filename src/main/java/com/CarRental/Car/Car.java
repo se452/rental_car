@@ -1,6 +1,7 @@
 package com.CarRental.Car;
 
 
+import java.time.LocalDate;
 import java.util.Date;
 
 import org.springframework.web.multipart.MultipartFile;
@@ -24,7 +25,7 @@ public class Car {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    
+
     private Long id;
 
     private String brand;
@@ -39,11 +40,11 @@ public class Car {
 
     private String description;
 
-    private Date year;
+    private LocalDate manufactureYear;
 
     private Long price;
 
-    
+
     @Column(columnDefinition = "longblob")
 //    private MultipartFile image;
     private byte[] image;
@@ -57,12 +58,10 @@ public class Car {
         carDto.setPrice(price);
         carDto.setDescription(description);
         carDto.setType(type);
-        carDto.setYear(year);
+        carDto.setManufactureYear(manufactureYear);
         carDto.setTransmission(transmission);
-        carDto.setImage(image);
+        carDto.setReturnedImage(image);
         return carDto;
-
-
 
 
 //    public CarDto getCarDto() {
@@ -71,4 +70,5 @@ public class Car {
 //
 //    }
 
+    }
 }

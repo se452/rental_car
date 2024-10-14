@@ -17,9 +17,11 @@ import com.CarRental.Car.CarDto;
 import lombok.RequiredArgsConstructor;
 
 @RestController
-@RequestMapping("/api/customer")
+@RequestMapping("/api/car/customer")
 @RequiredArgsConstructor
 public class CustomerController {
+
+
 
     private final CustomerService customerService;
 

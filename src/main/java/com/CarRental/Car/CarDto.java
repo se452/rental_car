@@ -1,4 +1,5 @@
 package com.CarRental.Car;
+import java.time.LocalDate;
 import java.util.Date;
 
 import org.springframework.web.multipart.MultipartFile;
@@ -24,13 +25,13 @@ public class CarDto {
 
     private String description;
 
-    private Date year;
+    private LocalDate manufactureYear;
 
     private Long price;
 
     private MultipartFile image;
 
 
-    private byte[] MultipartFile ;
+    private byte[] returnedImage ;
     
 }

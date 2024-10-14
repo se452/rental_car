@@ -2,6 +2,7 @@ package com.CarRental.controller;
 
 import java.io.IOException;
 
+import com.CarRental.Car.services.admin.AdminService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -10,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.CarRental.Car.CarDto;
-import com.CarRental.services.admin.AdminService;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;

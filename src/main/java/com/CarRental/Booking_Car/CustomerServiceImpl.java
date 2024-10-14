@@ -5,16 +5,19 @@ import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 import com.CarRental.Car.Car;
 import com.CarRental.Car.CarDto;
+import com.CarRental.Car.CarRepository;
 import com.CarRental.user.UserRepository;
 import com.CarRental.user.User;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 
 @RequiredArgsConstructor
+@Service
 public class CustomerServiceImpl implements CustomerService {
 
     private final CarRepository carRepository;
     private final UserRepository userRepository;
-    private final BookACarReposiotry bookACarRepository;
+    private final BookACarRepository bookACarRepository;
 
     @Override
     public List<CarDto> getAllCars() {

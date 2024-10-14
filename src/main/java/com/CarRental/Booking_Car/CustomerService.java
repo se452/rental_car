@@ -2,6 +2,8 @@ package com.CarRental.Booking_Car;
 
 import java.util.List;
 import com.CarRental.Car.CarDto;
+import org.springframework.stereotype.Service;
+
 
 public interface CustomerService {
 

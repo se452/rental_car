@@ -1,4 +1,4 @@
-package com.CarRental.services.admin;
+package com.CarRental.Car.services.admin;
 
 import java.io.IOException;
 import java.util.List;
@@ -29,7 +29,7 @@ public class AdminServiceImpl implements AdminService {
             car.setBrand(carDto.getBrand());
             car.setColor(carDto.getColor());
             car.setPrice(carDto.getPrice());
-            car.setYear(carDto.getYear());
+            car.setManufactureYear(carDto.getManufactureYear());
             car.setType(carDto.getType());
             car.setDescription(carDto.getDescription());
             car.setTransmission(carDto.getTransmission());
@@ -65,7 +65,7 @@ public class AdminServiceImpl implements AdminService {
     }
 
     @Override
-    public boolean updateCar(Long carId, CarDto carDto) {
+    public boolean updateCar(Long carId, CarDto carDto) throws IOException {
         Optional<Car> optionalCar = carRepository.findById(carId);
         if (optionalCar.isPresent()) {
             Car existingCar = optionalCar.get();
@@ -73,7 +73,7 @@ public class AdminServiceImpl implements AdminService {
             existingCar.setBrand(carDto.getBrand());
             existingCar.setColor(carDto.getColor());
             existingCar.setPrice(carDto.getPrice());
-            existingCar.setYear(carDto.getYear());
+            existingCar.setManufactureYear(carDto.getManufactureYear());
             existingCar.setType(carDto.getType());
             existingCar.setDescription(carDto.getDescription());
             existingCar.setTransmission(carDto.getTransmission());
