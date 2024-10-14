@@ -1,15 +1,11 @@
 package com.CarRental.user;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity
 @Data
-@Table(name = "Users")
+@Table(name = "users")
 public class User {
 
     @Id
@@ -18,6 +14,7 @@ public class User {
     private String name;
     private String email;
     private String password;
+    @Enumerated(EnumType.STRING)
     private UserRole userRole;
 
 }

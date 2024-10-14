@@ -1,13 +1,13 @@
 package com.CarRental.Car;
-<<<<<<< HEAD
+
 
 import java.util.Date;
 
 import org.springframework.web.multipart.MultipartFile;
-=======
+
 
 import java.util.Date;
->>>>>>> c8b8b084b4274a4ac949778bdc28d467cc13cd75
+
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -19,7 +19,7 @@ import lombok.Data;
 
 @Entity
 @Data
-@Table(CarDto carDtoname = "cars")
+@Table(name = "cars")
 public class Car {
 
     @Id
@@ -42,10 +42,11 @@ public class Car {
     private Date year;
 
     private Long price;
-<<<<<<< HEAD
+
     
     @Column(columnDefinition = "longblob")
-    private MultipartFile image;
+//    private MultipartFile image;
+    private byte[] image;
 
     public CarDto getCarDto() {
         CarDto carDto = new CarDto();
@@ -61,14 +62,13 @@ public class Car {
         carDto.setImage(image);
         return carDto;
 
-=======
 
-    private byte[] image;
 
-    public CarDto getCarDto() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getCarDto'");
->>>>>>> c8b8b084b4274a4ac949778bdc28d467cc13cd75
-    }
+
+//    public CarDto getCarDto() {
+//        // TODO Auto-generated method stub
+//        throw new UnsupportedOperationException("Unimplemented method 'getCarDto'");
+//
+//    }
 
 }
