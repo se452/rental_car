@@ -64,11 +64,7 @@ public class Car {
         return carDto;
 
 
-//    public CarDto getCarDto() {
-//        // TODO Auto-generated method stub
-//        throw new UnsupportedOperationException("Unimplemented method 'getCarDto'");
-//
-//    }
+
 
     }
 }
