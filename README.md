@@ -36,7 +36,8 @@ Milestone
 
             <td>Siddharth Rajput</td>
             <td> - </td>
-
+      </tr>
+      <tr>
            
             <td>Harish</td>
             <td>Payment Functionality</td>
