@@ -99,6 +99,6 @@ Milestone
 <h1> Milestone 2 </h1>
 <p>Focus Area: Persistent Related Deliverables</p>
 
-<h5>Lessons learned</h5>
+<h1>Lessons learned</h1>
 <p>Effective communication and sprint planning is important when working in a team to deliver deliverables in time.</p>
 
