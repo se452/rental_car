@@ -8,10 +8,8 @@ import org.springframework.context.annotation.ComponentScan;
 //@ComponentScan(basePackages = {"com.CarRental", "com.CarRental.Booking_Car"})
 public class CarRentalApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(CarRentalApplication.class, args);
-	}
-
-
+    public static void main(String[] args) {
+        SpringApplication.run(CarRentalApplication.class, args);
+    }
 
 }
