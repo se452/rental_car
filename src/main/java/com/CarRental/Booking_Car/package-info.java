@@ -1,28 +1,36 @@
-/*
-*  This package contains the Booking_Car class which is used to book a car.
-
-*  The Booking_Car class is used to book a car by taking the details of the car from the user and storing it in the database.
-*  
-*  The Booking_Car class contains the following methods:
-*  1. bookCar() - This method is used to book a car by taking the details of the car from the user and storing it in the database.
-*  2. displayCarDetails() - This method is used to display the details of the car that is booked.
-*  3. displayBookingDetails() - This method is used to display the details of the booking.
-*  4. displayBookingHistory() - This method is used to display the booking history of the user.
-*  5. displayBookingHistoryAdmin() - This method is used to display the booking history of all the users.
-*  6. cancelBooking() - This method is used to cancel the booking of the user.
-*  7. updateBooking() - This method is used to update the booking of the user.
-*  8. displayCarDetailsAdmin() - This method is used to display the details of the car that is booked by the user.
-*  9. displayBookingDetailsAdmin() - This method is used to display the details of the booking of the user.
-*  10. displayBookingHistoryAdmin() - This method is used to display the booking history of all the users.
-*  11. cancelBookingAdmin() - This method is used to cancel the booking of the user.
-*  12. updateBookingAdmin() - This method is used to update the booking of the user.
-*  13. displayCarDetailsAdmin() - This method is used to display the details of the car that is booked by the user.
-*  14. displayBookingDetailsAdmin() - This method is used to display the details of the booking of the user.
-
-
-
+/**
+ * Provides classes and interfaces for managing car bookings within the Car Rental System.
+ *
+ * <p>This package encapsulates the functionality required to handle car bookings, including the management of
+ * user interactions for booking, updating, and canceling reservations.
+ *
+ * <p>Key classes in the Booking_Car package include:
+ * <ul>
+ *     <li><strong>Booking_Car</strong> - This class is responsible for booking a car, taking user details, and 
+ *     storing them in the database.</li>
+ *     <li><strong>BookingHistory</strong> - This class manages the booking history for users, allowing them to view
+ *     past bookings.</li>
+ *     <li><strong>AdminBookingManager</strong> - This class provides admin functionalities to manage all bookings,
+ *     including viewing and canceling bookings for all users.</li>
+ * </ul>
+ *
+ * <p>Functionality provided by the Booking_Car class includes:
+ * <ul>
+ *     <li><strong>bookCar()</strong> - Book a car based on user input.</li>
+ *     <li><strong>displayCarDetails()</strong> - Show the details of the booked car.</li>
+ *     <li><strong>displayBookingDetails()</strong> - Provide details of the current booking.</li>
+ *     <li><strong>displayBookingHistory()</strong> - Retrieve the user's booking history.</li>
+ *     <li><strong>cancelBooking()</strong> - Allow users to cancel their bookings.</li>
+ *     <li><strong>updateBooking()</strong> - Update existing bookings.</li>
+ *     <li><strong>Admin functionalities</strong> - Manage booking details and histories from an admin perspective.</li>
+ * </ul>
+ *
+ * <p>This package serves both customer and admin functionalities, providing essential methods to interact with 
+ * the booking system while ensuring data integrity and security.
+ *
  * @author Manthan Mohile
  */
+ 
 
 
 package com.CarRental.Booking_Car;
