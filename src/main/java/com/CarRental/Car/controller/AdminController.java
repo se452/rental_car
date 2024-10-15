@@ -31,8 +31,7 @@ public class AdminController {
     private final AdminService adminService;
 
     @PostMapping("/car")
-    
-    
+
     public ResponseEntity<?> postCar(@ModelAttribute CarDto carDto) throws IOException {
         
         boolean success = adminService.postCar(carDto);
