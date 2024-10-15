@@ -39,8 +39,7 @@ Milestone
         <tr>
             <td>Harish</td>
             <td>Payment Functionality</td>
-        </tr>
-        
+        </tr>      
     </tbody>
 </table>
 
