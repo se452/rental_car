@@ -33,11 +33,10 @@ Milestone
             <td>Car Booking status</td>
         </tr>
         <tr>
-
             <td>Siddharth Rajput</td>
             <td> - </td>
-      </tr>
-      <tr>
+        </tr>
+        <tr>
            
             <td>Harish</td>
             <td>Payment Functionality</td>
