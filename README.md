@@ -4,7 +4,7 @@ Milestone
    <li>Milestone 1: Identify the roles and resposibilities for each of the project members as well as setting up the project structure accordigly.</li>
 </ul>
 
-<li>Milestone 2: Database selection.</li>
+   <li>Milestone 2: Each Team member worked on assigned feature for the project as well as we created In-memory database. </li>
 </ul>
 
   <h1>Prototype</h1>
@@ -33,6 +33,11 @@ Milestone
             <td>Car Booking status</td>
         </tr>
         <tr>
+
+            <td>Siddharth Rajput</td>
+            <td> - </td>
+
+           
             <td>Harish</td>
             <td>Payment Functionality</td>
         </tr>
