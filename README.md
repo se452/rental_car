@@ -4,6 +4,9 @@ Milestone
    <li>Milestone 1: Identify the roles and resposibilities for each of the project members as well as setting up the project structure accordigly.</li>
 </ul>
 
+<li>Milestone 2: Database selection.</li>
+</ul>
+
   <h1>Prototype</h1>
   <a href="https://drive.google.com/file/d/1Y_JMWRthXNXGP7GGjJre9CIux7mjER56/view" alt=" Prototype">*Prototype</a>
 
