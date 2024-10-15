@@ -91,5 +91,18 @@ Milestone
       <td>We are familiar with it as we learnt it in the DevOps class</td>
     </tr>
 
+
+
   </tbody>
 </table>
+
+<h1> Milestone 2 </h1>
+<p>Focus Area: Persistent Related Deliverables</p>
+
+
+<h1>Appendix</h1>
+
+![WhatsApp Image 2024-10-14 at 21.25.35.jpeg](..%2F..%2F..%2FDownloads%2FWhatsApp%20Image%202024-10-14%20at%2021.25.35.jpeg)
+
+![WhatsApp Image 2024-10-14 at 21.25.56.jpeg](..%2F..%2F..%2FDownloads%2FWhatsApp%20Image%202024-10-14%20at%2021.25.56.jpeg)
+
