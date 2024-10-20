@@ -1,4 +1,4 @@
-package com.CarRental.Booking_Car.Controller;
+package com.CarRental.bookingcar.Controller;
 
 import java.util.List;
 
@@ -10,8 +10,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.CarRental.Booking_Car.BookCarDto;
-import com.CarRental.Booking_Car.CustomerService;
+import com.CarRental.bookingcar.BookCarDto;
+;
+import com.CarRental.bookingcar.CustomerService;
+;
 import com.CarRental.Car.CarDto;
 
 import lombok.RequiredArgsConstructor;
@@ -20,8 +22,6 @@ import lombok.RequiredArgsConstructor;
 @RequestMapping("/api/car/customer")
 @RequiredArgsConstructor
 public class CustomerController {
-
-
 
     private final CustomerService customerService;
 

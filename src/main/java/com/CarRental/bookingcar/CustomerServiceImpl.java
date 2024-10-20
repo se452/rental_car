@@ -1,4 +1,4 @@
-package com.CarRental.Booking_Car;
+package com.CarRental.bookingcar;
 
 import java.util.*;
 import java.util.concurrent.TimeUnit;

@@ -1,10 +1,10 @@
-package com.CarRental.Booking_Car;
+package com.CarRental.bookingcar;
 
 import java.util.Date;
 
 import lombok.Data;
 
-@Data 
+@Data
 public class BookCarDto {
 
     private Long id;
@@ -22,8 +22,5 @@ public class BookCarDto {
     private Long user_id;
 
     private Long car_id;
-
-
-
 
 }
