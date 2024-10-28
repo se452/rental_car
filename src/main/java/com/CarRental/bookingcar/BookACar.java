@@ -9,6 +9,7 @@ import com.CarRental.Car.Car;
 import com.CarRental.user.User;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import jakarta.annotation.Generated;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
@@ -16,6 +17,8 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OnDelete;
+import jakarta.persistence.Table;
 import lombok.Data;
 
 @Entity
@@ -47,4 +50,19 @@ public class BookACar {
     @JsonIgnore
     private Car car;
 
+    public BookCarDto getBookCarDto() {
+        BookCarDto bookCarDto = new BookCarDto();
+        bookCarDto.setId(id);
+        bookCarDto.setFromDate(FromDate);
+        bookCarDto.setToDate(ToDate);
+        bookCarDto.setDays(days);
+        bookCarDto.setPrice(price);
+        bookCarDto.setStatus(bookCarStatus);
+        bookCarDto.setUser_id(user.getId());
+        bookCarDto.setCar_id(car.getId());
+        bookCarDto.setUsername(user.getName());
+        bookCarDto.setEmail(user.getEmail());
+        return bookCarDto;
+
+    }
 }

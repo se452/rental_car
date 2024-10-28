@@ -59,4 +59,11 @@ public class CustomerServiceImpl implements CustomerService {
         }
         return null;
     }
+
+    @Override
+    public List<BookCarDto> getBookingsByUser_id(Long user_id) {
+        return bookACarRepository.findByUser_id(user_id).stream()
+                .map(BookACar::getBookCarDto)
+                .collect(Collectors.toList());
+    }
 }

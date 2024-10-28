@@ -5,16 +5,15 @@ import java.util.List;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.CarRental.bookingcar.BookCarDto;
-;
-import com.CarRental.bookingcar.CustomerService;
-;
 import com.CarRental.Car.CarDto;
+import com.CarRental.bookingcar.BookCarDto;
+import com.CarRental.bookingcar.CustomerService;
 
 import lombok.RequiredArgsConstructor;
 
@@ -42,7 +41,7 @@ public class CustomerController {
     }
 
     @GetMapping("/car/{id}")
-    public ResponseEntity<CarDto> getCarById(Long id) {
+    public ResponseEntity<CarDto> getCarById(@PathVariable Long id) {
         CarDto carDto = customerService.getCarById(id);
         if (carDto != null) {
             return ResponseEntity.ok(carDto);
@@ -50,4 +49,11 @@ public class CustomerController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
+
+    @GetMapping("car/bookings/{user_id}")
+    public ResponseEntity<?> getBookingsByUser_id(@PathVariable Long user_id) {
+        List<BookCarDto> bookings = customerService.getBookingsByUser_id(user_id);
+        return ResponseEntity.ok(bookings);
+    }
+
 }
