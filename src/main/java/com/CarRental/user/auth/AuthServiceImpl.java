@@ -1,7 +1,9 @@
 package com.CarRental.user.auth;
 
 import com.CarRental.user.*;
+import com.CarRental.user.dto.UserDto;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -15,7 +17,7 @@ public class AuthServiceImpl implements  AuthService{
         User user = new User();
         user.setName(signupRequest.getName());
         user.setEmail(signupRequest.getEmail());
-        user.setPassword(signupRequest.getPassword());
+        user.setPassword(new BCryptPasswordEncoder().encode(signupRequest.getPassword()));
         user.setUserRole(UserRole.CUSTOMER);
         User createedUser = userRepository.save(user);
         UserDto userDto =new UserDto();

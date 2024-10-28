@@ -1,5 +1,6 @@
-package com.CarRental.user;
+package com.CarRental.user.dto;
 
+import com.CarRental.user.UserRole;
 import lombok.Data;
 
 @Data

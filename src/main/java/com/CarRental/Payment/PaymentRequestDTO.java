@@ -1,4 +1,4 @@
-package com.CarRental.payment;
+package com.CarRental.Payment;
 
 public class PaymentRequestDTO {
     private String cardNumber;
