@@ -52,7 +52,7 @@ public class BookACar {
 
     public BookCarDto getBookCarDto() {
         BookCarDto bookCarDto = new BookCarDto();
-        bookCarDto.setId(id);
+        bookCarDto.setId((long) id);
         bookCarDto.setFromDate(FromDate);
         bookCarDto.setToDate(ToDate);
         bookCarDto.setDays(days);
