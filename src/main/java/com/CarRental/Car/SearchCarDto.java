@@ -10,9 +10,6 @@ public class SearchCarDto {
     private String type;
     private String transmission;
     
-    
-
-   
 
     
 }
