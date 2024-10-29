@@ -102,12 +102,6 @@
             <optional>true</optional>
         </dependency>
 
-        <!-- Spring Boot Test for testing -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
 
     </dependencies>
 
