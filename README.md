@@ -1,7 +1,8 @@
 <h1>Purpose</h1>
 <ul>
-    <li>Milestone 1: Identify the roles and responsibilities for each of the project members as well as setting up the project structure accordingly.</li>
-    <li>Milestone 2: Each team member worked on assigned features for the project, and we created an in-memory database.</li>
+    <li>Milestone 1: Identify the roles and responsibilities for each of the project members as well as setting up the project structure accordingly.</li><br>
+    <li>Milestone 2: Each team member worked on assigned features for the project, and we created an in-memory database.</li><br>
+<li>Milestone 3: Added necessary features for the backend and required service layers, UI & MySQL </li>
 </ul>
 
 <h1>Prototype</h1>
@@ -30,7 +31,7 @@
         </tr>
         <tr>
             <td>Siddharth Rajput</td>
-            <td>-</td>
+            <td>Login & Sign Up Front End</td>
         </tr>
         <tr>
             <td>Harish</td>
@@ -81,15 +82,34 @@
         <tr>
             <td>4</td>
             <td>Configuration Management</td>
-            <td>Yaml</td>
+            <td>application.properties</td>
             <td>Properties</td>
             <td>We are familiar with it as we learned it in the DevOps class.</td>
+        </tr>
+
+<tr>
+            <td>5</td>
+            <td>Database</td>
+            <td>MySQL</td>
+            <td>H2</td>
+            <td>We are familiar with it </td>
+        </tr>
+
+<tr>
+            <td>6</td>
+            <td>Front End</td>
+            <td>Angular</td>
+            <td>Thymeleaf</td>
+            <td>Everyone is familiar with Angular</td>
         </tr>
     </tbody>
 </table>
 
-<h1>Milestone 2</h1>
-<p>Focus Area: Persistent Related Deliverables</p>
+<h1>Milestone 3</h1>
+<p>Added necessary features for the backend and required service layers & UI</p>
 
 <h1>Lessons Learned</h1>
-<p>Effective communication and sprint planning are important when working in a team to deliver deliverables on time.</p>
+1.	We learned how to implement an SQL to develop a database for our data. <br><br>
+2.	We learned how to use JPA to model data objects to represent the data we wanted to store and how to handle it.<br><br>
+3.	We learned how to set-up a static website with spring boot as our backend and Angular for our front end.<br><br>
+4.	We learned how to use the applications.properties to setup configuration for our Spring boot environment.
