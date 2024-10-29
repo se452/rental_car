@@ -1,4 +1,4 @@
-package com.CarRental.controller;
+package com.CarRental.Car.controller;
 
 import java.io.IOException;
 
