@@ -1,0 +1,114 @@
+.login {
+    height: 100vh;
+    .image {
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+    .row {
+      height: 100%;
+    }
+    svg {
+      width: 80%;
+      display: flex;
+      margin: auto;
+    }
+    &__form {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      text-align: center;
+      a {
+          color: var(--secondary);
+      }
+      .forget {
+          display: flex;
+          justify-content: left;
+          margin-top: 0.5rem;
+      }
+      form {
+        width: 28rem;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        padding: 1rem;
+        border-radius: 0.5rem;
+      }
+      h2 {
+        margin-bottom: 3rem;
+        margin-top: 0;
+        color: var(--primary);
+        font-size: 2.5rem;
+      }
+      .input {
+        --size-bezel: 0.5rem;
+        --size-radius: 0.5rem;
+        position: relative;
+        display: block;
+        width: 100%;
+        margin-top: 1rem;
+        .btn-otp {
+          position: absolute;
+          right: 0.15rem;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        &__label {
+          position: absolute;
+          left: 0;
+          top: 0;
+          padding: calc(var(--size-bezel) * 0.5) calc(var(--size-bezel) * 1.5);
+          margin: calc(var(--size-bezel) * 0.75 + 3px)
+            calc(var(--size-bezel) * 0.5);
+          background: pink;
+          white-space: nowrap;
+          transform: translate(0, 0);
+          transform-origin: 0 0;
+          background: var(--white);
+          transition: transform 120ms ease-in;
+          font-weight: 600;
+          line-height: 1;
+          color: rgba(0, 0, 0, 0.5);
+          z-index: 50;
+          border-radius: 0.25rem;
+        }
+        &__field {
+          box-sizing: border-box;
+          display: block;
+          border-radius: 0.25rem;
+          width: 100%;
+          border: 2px solid #eee !important;
+          padding: calc(var(--size-bezel) * 1) var(--size-bezel);
+          color: currentColor;
+          background: transparent;
+          border-radius: var(--size-radius);
+          accent-color: var(--primary);
+          height: calc(var(--size-bezel) * 5.5);
+          //   font-size: 16px;
+          @media only screen and (min-width: 1440px) {
+            font-size: 20px;
+          }
+          ::ng-deep.my-dropdown__toggle {
+            border: 0;
+          }
+          ::ng-deep.select2-selection {
+            border: 0px;
+            min-height: 2.25rem;
+          }
+          &:focus,
+          &:not(:placeholder-shown) {
+            & + .input__label {
+              transform: translate(0.5rem, -90%) scale(1);
+              color: var(--primary);
+              @media only screen and (max-width: 992px) {
+                transform: translate(0.5rem, -80%) scale(0.8);
+              }
+            }
+          }
+        }
+      }
+      button {
+          margin: 1rem 0 0.5rem;
+      }
+    }
+  }
+  

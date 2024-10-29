@@ -1,7 +1,7 @@
 package com.CarRental.user.auth;
 
 import com.CarRental.user.SignupRequest;
-import com.CarRental.user.UserDto;
+import com.CarRental.user.dto.UserDto;
 
 public interface AuthService {
 

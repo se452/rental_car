@@ -6,11 +6,16 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 import com.CarRental.Car.services.admin.AdminService;
+
+import org.springframework.data.domain.Example;
+import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.stereotype.Service;
 
 import com.CarRental.Car.Car;
 import com.CarRental.Car.CarDto;
+import com.CarRental.Car.CarDtoListDto;
 import com.CarRental.Car.CarRepository;
+import com.CarRental.Car.SearchCarDto;
 
 import lombok.RequiredArgsConstructor;
 
@@ -85,8 +90,34 @@ public class AdminServiceImpl implements AdminService {
         }
     }
 
+    @Override
+    public CarDtoListDto searchCar(SearchCarDto searchCarDto) {
+        Car car = new Car();
+        car.setBrand(searchCarDto.getBrand());
+        car.setColor(searchCarDto.getColor());
+        car.setType(searchCarDto.getType());
+        car.setTransmission(searchCarDto.getTransmission());
+
+        ExampleMatcher exampleMatcher = 
+                ExampleMatcher.matchingAll()
+                        .withMatcher("brand" , ExampleMatcher.GenericPropertyMatchers.contains().ignoreCase())
+                        .withMatcher("color" , ExampleMatcher.GenericPropertyMatchers.contains().ignoreCase())
+                        .withMatcher("type" , ExampleMatcher.GenericPropertyMatchers.contains().ignoreCase())
+                        .withMatcher("transmission" , ExampleMatcher.GenericPropertyMatchers.contains().ignoreCase());
+
+        Example<Car> carExample = Example.of(car, exampleMatcher);
+        List<Car> carList = carRepository.findAll(carExample);
+        CarDtoListDto carDtoListDto = new CarDtoListDto();
+        carDtoListDto.setCarDtoList(carList.stream().map(Car::getCarDto).collect(Collectors.toList()));
+        return carDtoListDto;
+
+                        
+    }
+
+    
 
 
+//adminserviceimplnew
 
     
 }

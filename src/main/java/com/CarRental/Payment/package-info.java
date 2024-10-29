@@ -7,9 +7,9 @@
  *
  * <p>Key components of the payment package include:
  * <ul>
- *     <li>{@link com.CarRental.payment.PaymentService} - Handles the initiation and processing of payments.</li>
- *     <li>{@link com.CarRental.payment.Transaction} - Represents a financial transaction.</li>
- *     <li>{@link com.CarRental.payment.PaymentGateway} -Yet to implement. Interface for integration with different payment processors.</li>
+ *     <li>{@link com.CarRental.Payment.PaymentService} - Handles the initiation and processing of payments.</li>
+ *     <li>{@link com.CarRental.Payment.Transaction} - Represents a financial transaction.</li>
+ *     <li>{@link com.CarRental.Payment.PaymentGateway} -Yet to implement. Interface for integration with different payment processors.</li>
  * 
  * </ul>
  *

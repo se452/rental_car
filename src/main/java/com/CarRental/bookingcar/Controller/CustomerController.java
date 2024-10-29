@@ -53,7 +53,11 @@ public class CustomerController {
     @GetMapping("/car/bookings/{user_id}")
     public ResponseEntity<?> getBookingsByUser_id(@PathVariable Long user_id) {
         List<BookCarDto> bookings = customerService.getBookingsByUser_id(user_id);
-        return ResponseEntity.ok(bookings);
+        if (bookings != null) {
+            return ResponseEntity.ok(bookings);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
 
     }
 

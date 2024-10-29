@@ -1,4 +1,4 @@
-package com.CarRental.controller;
+package com.CarRental.Car.controller;
 
 import java.io.IOException;
 
@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.CarRental.Car.CarDto;
+import com.CarRental.Car.SearchCarDto;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -81,6 +82,12 @@ public class AdminController {
         } catch (Exception e) {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
         }
+    }
+
+
+    @PutMapping("/car/search")
+    public ResponseEntity<?> searchCar(@RequestBody SearchCarDto searchCarDto) {
+        return ResponseEntity.ok(adminService.searchCar(searchCarDto));
     }
 
 }
