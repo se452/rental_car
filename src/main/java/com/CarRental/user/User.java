@@ -29,17 +29,13 @@ public class User implements UserDetails {
     @Enumerated(EnumType.STRING)
     private UserRole userRole;
 
-<<<<<<< Updated upstream
-    public String getUsername() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getUsername'");
-    }
+
 
     public String getEmail() {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
-=======
+
 
 
     @Override
@@ -73,6 +69,4 @@ public class User implements UserDetails {
     }
 
 
-
->>>>>>> Stashed changes
 }
