@@ -8,7 +8,11 @@ import { CustomerRoutingModule } from './customer-routing.module';
   declarations: [],
   imports: [
     CommonModule,
-    CustomerRoutingModule
+    CustomerRoutingModule,
+    ngZorroImportsModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ]
 })
 export class CustomerModule { }
