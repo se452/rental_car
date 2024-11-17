@@ -1,4 +1,4 @@
-package com.carRental.payment;
+package com.CarRental.Payment;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

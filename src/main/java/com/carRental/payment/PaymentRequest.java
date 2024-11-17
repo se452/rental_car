@@ -1,4 +1,4 @@
-package com.carRental.payment;
+package com.CarRental.Payment;
 
 public class PaymentRequest {
     private String amount;

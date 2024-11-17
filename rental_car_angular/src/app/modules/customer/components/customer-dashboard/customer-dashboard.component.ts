@@ -1,18 +1,3 @@
-<<<<<<< Updated upstream
-import { Component } from '@angular/core';
-
-@Component({
-  selector: 'app-customer-dashboard',
-  standalone: true,
-  imports: [],
-  templateUrl: './customer-dashboard.component.html',
-  styleUrl: './customer-dashboard.component.css'
-})
-
-export class CustomerDashboardComponent {
-
-}
-=======
 import { Component } from '@angular/core';
 import { CustomerService } from '../../services/customer.service';
 import { NzMessageService } from 'ng-zorro-antd/message';
@@ -42,4 +27,3 @@ export class CustomerDashboardComponent {
   }
 
 }
->>>>>>> Stashed changes

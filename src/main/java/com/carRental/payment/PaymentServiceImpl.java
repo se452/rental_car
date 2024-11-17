@@ -1,4 +1,4 @@
-package com.carRental.payment;
+package com.CarRental.Payment;
 
 
 import org.springframework.beans.factory.annotation.Autowired;

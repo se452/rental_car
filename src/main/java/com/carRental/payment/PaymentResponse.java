@@ -1,4 +1,4 @@
-package com.carRental.payment;
+package com.CarRental.Payment;
 
 public class PaymentResponse {
     private String status; 
