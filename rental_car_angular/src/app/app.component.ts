@@ -1,16 +1,34 @@
 import { Component } from '@angular/core';
-import {RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
-import {NzHeaderComponent} from "ng-zorro-antd/layout";
-import {NzButtonComponent} from "ng-zorro-antd/button";
-import {NzRowDirective} from "ng-zorro-antd/grid";
+import { StorageService } from './auth/services/storage/storage.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet, NzHeaderComponent, RouterLink, NzButtonComponent, RouterLinkActive, NzRowDirective],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'rental_car_angular';
+  title = 'reatacar-angular';
+
+  constructor(private router: Router) { }
+
+  isAdminLoggedIn: boolean = StorageService.isAdminLoggedIn();
+  isCustomerLoggedIn: boolean = StorageService.isCustomerLoggedIn();
+
+  ngOnInit() {
+    this.router.events.subscribe(event => {
+      if (event.constructor.name === "NavigationEnd") {
+        this.isAdminLoggedIn = StorageService.isAdminLoggedIn();
+        this.isCustomerLoggedIn = StorageService.isCustomerLoggedIn();
+      }
+    })
+  }
+
+  logout() {
+    StorageService.logout();
+    this.router.navigateByUrl("/login");
+  }
+
+
+
 }
