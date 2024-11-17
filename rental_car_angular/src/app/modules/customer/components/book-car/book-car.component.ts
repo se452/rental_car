@@ -1,63 +1,56 @@
 import { Component } from '@angular/core';
-import { CustomerService } from '../../service/customer.service';
-import { ActivatedRoute } from '@angular/router';
-import { FormGroup, FormBuilder } from '@angular/forms';
-import { StorageService } from '../../../../auth/services/storage/storage.service';
+import { CustomerService } from '../../services/customer.service';
 import { NzMessageService } from 'ng-zorro-antd/message';
-import { Router } from '@angular/router';
-import { error } from 'console';
+import { ActivatedRoute } from '@angular/router';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { StorageService } from 'src/app/auth/services/storage/storage.service';
 
 @Component({
   selector: 'app-book-car',
-  standalone: true,
-  imports: [],
   templateUrl: './book-car.component.html',
-  styleUrl: './book-car.component.css'
+  styleUrls: ['./book-car.component.scss']
 })
 export class BookCarComponent {
-  carId: number = this.activatedRoute.snapshot.params['id'];
+
   car: any;
-  processedImage: any;  
-  validateForm: FormGroup | undefined; 
-  isSpinning: boolean = false;
-  dateformat: string = 'mm/dd/yyyy';
-  storageService: any;
-  
-  constructor(private service1: CustomerService, private activatedRoute: ActivatedRoute, private fb: FormBuilder, private message: NzMessageService, private router: Router) { }
+  carId: number = this.activated.snapshot.params["id"];
+  bookACarForm!: FormGroup;
+  isSpinning = false;
+  dateFormat = "yyyy-mm-dd";
 
-  ngOnInit() {
-    this.getCarById();
-    this.validateForm = this.fb.group({
-      
-      toDaye: [null, Validators.required],
+  constructor(private customerService: CustomerService,
+    private message: NzMessageService,
+    private activated: ActivatedRoute,
+    private fb: FormBuilder) {
+    this.bookACarForm = this.fb.group({
       fromDate: [null, Validators.required],
-    });
-  }
-  getCarById(Id: number) {
-    this.service1.getCarById(Id).subscribe((res) => {
-      console.log(res);
-      this.processedImage= 'data:image/jpeg;base64,' + res.returnedImage;
-      this.car = res;
-        });
+      toDate: [null, Validators.required]
+    })
+    this.getCarById();
   }
 
-  bookACar(data: any) {
-    console.log(data);
-    this.isSpinning = true;
-    let bookACarDto = {
-      toDate: data.toDate,
-      userId: this.storageService.getUserId(),
-      userId: StorageService.getUserId(),
-      CarId: this.carId
-    }
-    this.service1.bookACar(bookACarDto).subscribe((res) => {
+  getCarById() {
+    this.customerService.getCarById(this.carId).subscribe((res) => {
       console.log(res);
-      this.message.success('Car Booked Successfully');
-      this.router.navigateByUrl('/customer/dashboard');
-    },error => {
+      res.processedImg = 'data:image/jpeg;base64,' + res.returnedImage;
+      this.car = res;
+    })
+  }
+
+  bookCar(formData: any) {
+    this.isSpinning = true;
+    let obj = {
+      fromDate: formData.fromDate,
+      toDate: formData.toDate,
+      userId: StorageService.getUserId()
+    }
+    this.customerService.bookACar(this.carId, obj).subscribe((res) => {
       this.isSpinning = false;
-      this.message.error('Failed to book car', {nzDuration: 5000});
-    });
+      console.log(res);
+      this.message.success("Car booked successfully", { nzDuration: 5000 });
+    }, error => {
+      this.message.error("Something went wrong", { nzDuration: 5000 });
+    })
   }
 
 }
