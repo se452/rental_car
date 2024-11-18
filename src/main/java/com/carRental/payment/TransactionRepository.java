@@ -1,6 +1,7 @@
-package com.CarRental.Payment;
+package com.carRental.payment;
 
 
+import com.carRental.payment.Transaction;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
