@@ -18,10 +18,14 @@ import com.carRental.car.SearchCarDto;
 import lombok.RequiredArgsConstructor;
 
 @Service
-@RequiredArgsConstructor
+
 public class AdminServiceImpl implements AdminService {
 
     private final CarRepository carRepository;
+
+    public AdminServiceImpl(CarRepository carRepository) {
+        this.carRepository = carRepository;
+    }
 
     @Override
     public boolean postCar(CarDto carDto) throws IOException {
@@ -38,7 +42,10 @@ public class AdminServiceImpl implements AdminService {
             car.setTransmission(carDto.getTransmission());
             car.setImage(carDto.getImage().getBytes());
             carRepository.save(car);
-            return true; 
+            return true;
+
+
+
             
         } catch (Exception e) {
             return false;

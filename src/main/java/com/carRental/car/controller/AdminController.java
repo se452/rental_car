@@ -27,14 +27,16 @@ import org.springframework.web.bind.annotation.PutMapping;
 
 @RestController
 @RequestMapping("/api/admin")
-@RequiredArgsConstructor
+
 public class AdminController {
 
     private final AdminService adminService;
 
+    public AdminController(AdminService adminService) {
+        this.adminService = adminService;
+    }
+
     @PostMapping("/car")
-    
-    
     public ResponseEntity<?> postCar(@ModelAttribute CarDto carDto) throws IOException {
         
         boolean success = adminService.postCar(carDto);

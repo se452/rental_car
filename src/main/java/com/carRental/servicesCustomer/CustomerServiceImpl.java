@@ -20,7 +20,6 @@ import java.util.stream.Collectors;
 
 
 @Service
-@RequiredArgsConstructor
 public class CustomerServiceImpl implements CustomerService {
 
     private final CarRepository carRepository;
@@ -28,6 +27,12 @@ public class CustomerServiceImpl implements CustomerService {
     private final UserRepository userRepository;
 
     private final BookACarRepository bookACarRepository;
+
+    public CustomerServiceImpl(CarRepository carRepository, UserRepository userRepository, BookACarRepository bookACarRepository) {
+        this.carRepository = carRepository;
+        this.userRepository = userRepository;
+        this.bookACarRepository = bookACarRepository;
+    }
 
     @Override
     public List<CarDto> getAllCars() {

@@ -28,7 +28,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/auth")
-@RequiredArgsConstructor
+
 public class AuthController {
 
     private final AuthService authService;
@@ -37,6 +37,14 @@ public class AuthController {
     private final UserService userService;
     private final JWTUtil jwtUtil;
     private final UserRepository userRepository;
+
+    public AuthController(AuthService authService, AuthenticationManager authenticationManager, UserService userService, JWTUtil jwtUtil, UserRepository userRepository) {
+        this.authService = authService;
+        this.authenticationManager = authenticationManager;
+        this.userService = userService;
+        this.jwtUtil = jwtUtil;
+        this.userRepository = userRepository;
+    }
 
 
     @PostMapping("/signup")

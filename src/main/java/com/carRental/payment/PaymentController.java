@@ -10,10 +10,14 @@ import lombok.RequiredArgsConstructor;
 
 @RestController
 @RequestMapping("/api/payment")
-@RequiredArgsConstructor
+
 public class PaymentController {
 
     private final PaymentService paymentService;
+
+    public PaymentController(PaymentService paymentService) {
+        this.paymentService = paymentService;
+    }
 
     @PostMapping("/process")
 public ResponseEntity<Void> processPayment(@RequestBody PaymentRequest paymentRequest) {
