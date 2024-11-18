@@ -16,7 +16,8 @@ export class BookCarComponent {
   carId: number = this.activated.snapshot.params["id"];
   bookACarForm!: FormGroup;
   isSpinning = false;
-  dateFormat = "yyyy-mm-dd";
+  dateFormat = "yyyy-MM-dd"; // Ensure uppercase 'MM' for months
+
 
   constructor(private customerService: CustomerService,
     private message: NzMessageService,

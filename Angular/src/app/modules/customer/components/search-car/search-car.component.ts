@@ -12,7 +12,7 @@ export class SearchCarComponent {
   cars: any = [];
   isSpinning = false;
   validateForm: FormGroup;
-  listOfBrands = ["BMW", "AUDI", "FERRARI", "TESLA", "VOLVO", "TOYOTA", "HONDA", "FORD", "NISSAN", "HYUNDAI", "LEXUS", "KIA"];
+  listOfBrands = ["BMW", "AUDI", "FERRARI", "TESLA", "VOLVO", "TOYOTA", "HONDA", "FORD", "NISSAN", "HYUNDAI", "LEXUS", "KIA", "MERCEDES"];
   listOfType = ["Petrol", "Hybrid", "Diesel", "Electric", "CNG"];
   listOfColor = ["Red", "White", "Blue", "Black", "Orange", "Grey", "Silver"];
   listOfTransmission = ["Manual", "Automatic"];
