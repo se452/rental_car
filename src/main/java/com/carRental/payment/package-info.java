@@ -25,5 +25,6 @@
  *
  * @author harish kumar kovuru
  */
-package com.CarRental.Payment;
+package com.carRental.payment;
+
 
