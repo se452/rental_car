@@ -60,4 +60,7 @@ jobs:
           app-name: 'car-rental'
           slot-name: 'Production'
           package: '*.jar'
+
+
+#
           
