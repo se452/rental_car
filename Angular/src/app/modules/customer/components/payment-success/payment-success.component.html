@@ -1,0 +1,54 @@
+<!-- components/payment-success/payment-success.component.html -->
+<div class="success-container">
+    <div class="success-card">
+      <!-- Success Animation -->
+      <div class="success-animation">
+        <div class="checkmark">
+          <div class="checkmark-circle"></div>
+          <div class="checkmark-stem"></div>
+          <div class="checkmark-kick"></div>
+        </div>
+      </div>
+  
+      <!-- Success Message -->
+      <div class="success-content">
+        <h1>Payment Successful!</h1>
+        <p class="subtitle">Thank you for your payment</p>
+  
+        <!-- Payment Details -->
+        <div class="payment-details">
+          <div class="detail-row">
+            <span class="label">Transaction ID</span>
+            <span class="value">{{ paymentDetails.transactionId }}</span>
+          </div>
+          <div class="detail-row">
+            <span class="label">Amount Paid</span>
+            <span class="value">{{ paymentDetails.amount | currency }}</span>
+          </div>
+          <div class="detail-row">
+            <span class="label">Date</span>
+            <span class="value">{{ paymentDetails.date | date:'medium' }}</span>
+          </div>
+          <div class="detail-row">
+            <span class="label">Booking ID</span>
+            <span class="value">{{ paymentDetails.bookingId }}</span>
+          </div>
+        </div>
+  
+        <!-- Auto-redirect Message -->
+        <p class="redirect-message">
+          You will be redirected to payment history in 5 seconds...
+        </p>
+  
+        <!-- Action Buttons -->
+        <div class="action-buttons">
+          <button class="button secondary" (click)="goToHome()">
+            Make Another Payment
+          </button>
+          <button class="button primary" (click)="goToHistory()">
+            View Payment History
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>

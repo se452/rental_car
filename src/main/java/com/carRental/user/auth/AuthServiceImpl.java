@@ -7,10 +7,14 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
-@RequiredArgsConstructor
+
 public class AuthServiceImpl implements  AuthService{
 
     private  final UserRepository userRepository;
+
+    public AuthServiceImpl(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
 
     @Override
     public UserDto createCustomer(SignupRequest signupRequest) {

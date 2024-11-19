@@ -62,4 +62,69 @@ public class BookACar {
         return bookCarDto;
 
     }
+
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Date getFromDate() {
+        return FromDate;
+    }
+
+    public void setFromDate(Date fromDate) {
+        FromDate = fromDate;
+    }
+
+    public Date getToDate() {
+        return ToDate;
+    }
+
+    public void setToDate(Date toDate) {
+        ToDate = toDate;
+    }
+
+    public long getDays() {
+        return days;
+    }
+
+    public void setDays(long days) {
+        this.days = days;
+    }
+
+    public long getPrice() {
+        return price;
+    }
+
+    public void setPrice(long price) {
+        this.price = price;
+    }
+
+    public BookCarStatus getBookCarStatus() {
+        return bookCarStatus;
+    }
+
+    public void setBookCarStatus(BookCarStatus bookCarStatus) {
+        this.bookCarStatus = bookCarStatus;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public Car getCar() {
+        return car;
+    }
+
+    public void setCar(Car car) {
+        this.car = car;
+    }
 }
