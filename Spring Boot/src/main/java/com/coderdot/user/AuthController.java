@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Optional;
 
 @RestController
-@RequiredArgsConstructor
+
 @RequestMapping("/api/auth")
 public class AuthController {
 
@@ -34,6 +34,14 @@ public class AuthController {
     private final UserRepository userRepository;
 
     private final AuthService authService;
+
+    public AuthController(AuthenticationManager authenticationManager, UserService userService, JwtUtil jwtUtil, UserRepository userRepository, AuthService authService) {
+        this.authenticationManager = authenticationManager;
+        this.userService = userService;
+        this.jwtUtil = jwtUtil;
+        this.userRepository = userRepository;
+        this.authService = authService;
+    }
 
     @PostMapping("/signup")
     public ResponseEntity<?> createCustomer(@RequestBody SignupRequest signupRequest) {

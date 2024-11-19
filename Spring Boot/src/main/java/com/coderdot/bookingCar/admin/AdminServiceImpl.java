@@ -21,12 +21,17 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
-@RequiredArgsConstructor
+
 public class AdminServiceImpl implements AdminService {
 
     private final CarRepository carRepository;
 
     private final BookACarRepository bookACarRepository;
+
+    public AdminServiceImpl(CarRepository carRepository, BookACarRepository bookACarRepository) {
+        this.carRepository = carRepository;
+        this.bookACarRepository = bookACarRepository;
+    }
 
     @Override
     public boolean postCar(CarDto carDto) {

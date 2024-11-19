@@ -12,11 +12,15 @@ import java.io.IOException;
 import java.util.List;
 
 @RestController
-@RequiredArgsConstructor
+
 @RequestMapping("/api/admin")
 public class AdminController {
 
     private final AdminService adminService;
+
+    public AdminController(AdminService adminService) {
+        this.adminService = adminService;
+    }
 
     @PostMapping("/car")
     public ResponseEntity<?> postCar(@ModelAttribute CarDto carDto) {
