@@ -26,7 +26,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: java-app
-          path: '${{ github.workspace }}/rent-a-car-spring/target/*.jar'
+          path: '${{ github.workspace }}/Spring Boot/target/*.jar'
 
   deploy:
     runs-on: ubuntu-latest
