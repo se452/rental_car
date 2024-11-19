@@ -1,0 +1,54 @@
+<!-- components/payment-history/payment-history.component.html -->
+<div class="history-container">
+    <div class="history-card">
+      <!-- Header -->
+      <div class="history-header">
+        <h1>Payment History</h1>
+        <p>Recent payment transactions</p>
+      </div>
+  
+      <!-- Loading Spinner -->
+      <div *ngIf="loading" class="loading-container">
+        <div class="spinner"></div>
+        <p>Loading payment history...</p>
+      </div>
+  
+      <!-- Error Message -->
+      <div *ngIf="error" class="error-message">
+        {{ error }}
+      </div>
+  
+      <!-- History Table -->
+      <div class="history-table-container" *ngIf="!loading && paymentHistory.length > 0">
+        <table class="history-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Booking ID</th>
+              <th>Transaction Type</th>
+              <th>Amount</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let payment of paymentHistory">
+              <td>{{ formatDate(payment.timestamp) }}</td>
+              <td>{{ payment.bookingDetails?.id || 'N/A' }}</td>
+              <td>{{ payment.transactionType }}</td>
+              <td>{{ formatAmount(payment.amount) }}</td>
+              <td>
+                <span [class]="'status-badge ' + getStatusClass(payment.status)">
+                  {{ payment.status }}
+                </span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  
+      <!-- No Data Message -->
+      <div *ngIf="!loading && paymentHistory.length === 0" class="no-data">
+        <p>No payment history to display</p>
+      </div>
+    </div>
+  </div>
