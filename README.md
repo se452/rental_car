@@ -44,7 +44,7 @@ https://purple-flower-0e3b45010.5.azurestaticapps.net/
         </tr>
         <tr>
             <td>Siddharth Rajput</td>
-            <td>Login & Sign Up Front End</td>
+            <td> - </td>
         </tr>
         <tr>
             <td>Harish</td>
