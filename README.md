@@ -129,5 +129,4 @@ https://purple-flower-0e3b45010.5.azurestaticapps.net/
 
 <h1>Final Milestone</h1>
 <p>Updated fronted elements and successfully deployed web application </p>
-<p>For admin access, Email= admin@gmail.com and password = admin </p>
-<p>For customer access, Email= admin@gmail.com and password = admin </p>
+
