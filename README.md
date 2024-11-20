@@ -19,6 +19,9 @@ https://purple-flower-0e3b45010.5.azurestaticapps.net/
 <p>customer - ylakhani39@gmail.com (password - 12345)</p>
 
 
+<h2> Instructions to run the project</h2>
+<p>In order to run the web application first run the spring boot backend on the local machine and then click on the project link and login with the credentials</p>
+
 
 
 <h1>Project Members</h1>
