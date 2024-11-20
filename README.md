@@ -8,7 +8,18 @@
 </ul>
 
 <h1>Prototype</h1>
+<a href="https://drive.google.com/file/d/1kzeM-uzRtnfrYRK1y-2aWjsNeGn6AWe8/view?usp=sharing" alt="Prototype">* FINAL OUTPUT</a> <br>
 <a href="https://drive.google.com/file/d/1Y_JMWRthXNXGP7GGjJre9CIux7mjER56/view" alt="Prototype">*Prototype</a>
+
+
+<h3>PROJECT LINK</h3>
+https://purple-flower-0e3b45010.5.azurestaticapps.net/
+
+<p>admin - admin@gmail.com (password - admin)</p>
+<p>customer - ylakhani39@gmail.com (password - 12345)</p>
+
+
+
 
 <h1>Project Members</h1>
 <table>
