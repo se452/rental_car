@@ -1,0 +1,84 @@
+// payment-form.component.html
+<div class="payment-container">
+  <div class="payment-card">
+    <!-- Header -->
+    <div class="payment-header">
+      <h1>Complete Your Payment</h1>
+      <p class="subtitle">Secure payment processing by Stripe</p>
+    </div>
+
+    <!-- Order Summary -->
+    <div class="order-summary">
+      <h2>Order Summary</h2>
+      <div class="summary-item">
+        <span>Car Rental</span>
+        <span>${{ paymentForm.get('amount')?.value || '0.00' }}</span>
+      </div>
+      <div class="summary-total">
+        <span>Total</span>
+        <span>${{ paymentForm.get('amount')?.value || '0.00' }}</span>
+      </div>
+    </div>
+
+    <!-- Payment Form -->
+    <form [formGroup]="paymentForm" (ngSubmit)="onSubmit()" class="payment-form">
+      <div class="form-group">
+        <label for="booking_id">Booking ID</label>
+        <input 
+          type="text" 
+          id="booking_id" 
+          formControlName="booking_id"
+          required
+          [class.error]="paymentForm.get('booking_id')?.invalid && paymentForm.get('booking_id')?.touched"
+        >
+        <div class="error-message" *ngIf="paymentForm.get('booking_id')?.invalid && paymentForm.get('booking_id')?.touched">
+          Booking ID is required
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="amount">Amount</label>
+        <div class="amount-input">
+          <span class="currency">$</span>
+          <input 
+            type="number" 
+            id="amount" 
+            formControlName="amount"
+            required
+            [class.error]="paymentForm.get('amount')?.invalid && paymentForm.get('amount')?.touched"
+          >
+        </div>
+        <div class="error-message" *ngIf="paymentForm.get('amount')?.invalid && paymentForm.get('amount')?.touched">
+          Please enter a valid amount
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Card Details</label>
+        <div id="card-element" class="stripe-element"></div>
+        <div id="card-errors" class="error-message" role="alert"></div>
+      </div>
+
+      <!-- Error Message -->
+      <div class="error-message" *ngIf="error">
+        {{ error }}
+      </div>
+
+      <!-- Submit Button -->
+      <button 
+        type="submit" 
+        class="submit-button" 
+        [disabled]="paymentForm.invalid || loading"
+      >
+        <span *ngIf="!loading">Pay Now</span>
+        <div class="spinner" *ngIf="loading"></div>
+      </button>
+
+      <!-- Secure Badge -->
+      <div class="secure-badge">
+        <img src="assets/lock-icon.svg" alt="secure" class="lock-icon">
+        <span>Secure and encrypted payments</span>
+      </div>
+    </form>
+  </div>
+</div>
