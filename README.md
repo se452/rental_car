@@ -32,15 +32,15 @@ https://purple-flower-0e3b45010.5.azurestaticapps.net/
     <tbody>
         <tr>
             <td>Prathamesh</td>
-            <td>Car API - creation</td>
+            <td>Car Functionality</td>
         </tr>
         <tr>
             <td>Yogesh</td>
-            <td>Users Authentication and User Role</td>
+            <td>User Functionality</td>
         </tr>
         <tr>
             <td>Manthan</td>
-            <td>Car Booking status</td>
+            <td>Booking Car Functionality</td>
         </tr>
         <tr>
             <td>Siddharth Rajput</td>
